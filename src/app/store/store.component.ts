@@ -9,6 +9,7 @@ import { StoreService } from '../store.service';
   styleUrls: ['./store.component.css'],
   providers: [StoreService]
 })
+
 export class StoreComponent implements OnInit {
   stores: Store[];
 

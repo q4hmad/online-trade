@@ -12,5 +12,13 @@ export class StoreService {
     return STORES;
   }
 
+  getStoreById(storeId: number) {
+    for (var i = 0; i <= STORES.length - 1; i++) {
+      if (STORES[i].id === storeId) {
+        return STORES[i];
+      }
+    }
+  }
+
 
 }
