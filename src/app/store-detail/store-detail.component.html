@@ -1,4 +1,4 @@
 <div>
-  <h3>{{storeToDisplay.name}}</h3>
-  <h3>{{storeToDisplay.details}}</h3>
+  <h3>{{(storeToDisplay | async).name}}</h3>
+  <h3>{{(storeToDisplay | async).details}}</h3>
 </div>

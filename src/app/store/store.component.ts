@@ -21,7 +21,7 @@ export class StoreComponent implements OnInit {
     this.stores = this.storeService.getStores();
   }
 
-  goToDetailPage(clickedStore: Store) {
-    // this.router.navigate(['stores', clickedStore.id])
+  goToDetailPage(clickedStore) {
+    this.router.navigate(['stores', clickedStore.$key])
   }
 }

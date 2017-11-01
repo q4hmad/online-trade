@@ -20,12 +20,8 @@ export class StoreService {
     this.stores.push(newStore);
   }
 
-  getStoreById(storeId: number) {
-    // for (var i = 0; i <= STORES.length - 1; i++) {
-    //   if (STORES[i].id === storeId) {
-    //     return STORES[i];
-    //   }
-    // }
+  getStoreById(storeId: string) {
+    return this.database.object('stores/' + storeId);
   }
 
 
