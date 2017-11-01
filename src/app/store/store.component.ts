@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 
 export class StoreComponent implements OnInit {
   stores:  FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private storeService: StoreService) { }
 

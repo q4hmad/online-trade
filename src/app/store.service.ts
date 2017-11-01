@@ -21,8 +21,13 @@ export class StoreService {
   }
 
   getStoreById(storeId: string) {
-    return this.database.object('stores/' + storeId);
+    return this.database.object('/stores/' + storeId);
   }
 
+  updateStore(localUpdatedStore){
+    let storeEntryInFirebase = this.getStoreById(localUpdatedStore.$key);
+    storeEntryInFirebase.update({name: localUpdatedStore.name,
+                                details: localUpdatedStore.details});
+  }
 
 }

@@ -1,0 +1,11 @@
+<h4>Edit Store</h4>
+
+<label>New Store Name:</label>
+<input [(ngModel)]="selectedStore.name">
+<br>
+
+<label>New Store Details:</label>
+<input [(ngModel)]="selectedStore.details">
+<br>
+
+<button class="btn btn-warning" (click)="beginUpdatingStore(selectedStore)">Update</button>

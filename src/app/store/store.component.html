@@ -2,6 +2,11 @@
 
 <div *ngFor="let store of stores | async" (click)="goToDetailPage(store)" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{store.name}}</em> by {{store.details}}</h3>
+    <h3><em>{{store.name}}</em>  {{store.details}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{store.details}}
+      <hr>
+      <app-edit-store [selectedStore]="store"></app-edit-store>
+    </div>
   </div>
 </div>
