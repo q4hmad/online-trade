@@ -20,10 +20,10 @@ export class StoreDetailComponent implements OnInit {
 ) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.storeId = parseInt(urlParameters['id']);
-    });
-    this.storeToDisplay = this.storeService.getStoreById(this.storeId);
+  //   this.route.params.forEach((urlParameters) => {
+  //     this.storeId = parseInt(urlParameters['id']);
+  //   });
+  //   this.storeToDisplay = this.storeService.getStoreById(this.storeId);
   }
 
 }

@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent }   from './about/about.component';
 import { StoreComponent }   from './store/store.component';
 import { StoreDetailComponent }   from './store-detail/store-detail.component';
+import { AdminComponent }   from './admin/admin.component';
 
 
 
@@ -23,6 +24,10 @@ const appRoutes: Routes = [
  {
    path: 'stores/:id',
    component: StoreDetailComponent
+ },
+ {
+   path: 'admin',
+   component: AdminComponent
  }
 ];
 

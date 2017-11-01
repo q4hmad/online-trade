@@ -1,6 +1,6 @@
 <h2>Online Store</h2>
 
-<div *ngFor="let store of stores" (click)="goToDetailPage(store)" class="panel panel-default">
+<div *ngFor="let store of stores | async" (click)="goToDetailPage(store)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{store.name}}</em> by {{store.details}}</h3>
   </div>

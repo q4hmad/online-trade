@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store} from '../store.model';
 import { Router } from '@angular/router';
 import { StoreService } from '../store.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-store',
@@ -11,7 +12,7 @@ import { StoreService } from '../store.service';
 })
 
 export class StoreComponent implements OnInit {
-  stores: Store[];
+  stores:  FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private storeService: StoreService) { }
 
@@ -21,6 +22,6 @@ export class StoreComponent implements OnInit {
   }
 
   goToDetailPage(clickedStore: Store) {
-    this.router.navigate(['stores', clickedStore.id])
+    // this.router.navigate(['stores', clickedStore.id])
   }
 }
