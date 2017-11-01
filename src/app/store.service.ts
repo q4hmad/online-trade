@@ -30,4 +30,9 @@ export class StoreService {
                                 details: localUpdatedStore.details});
   }
 
+  deleteStore(localStoreToDelete){
+    var storeEntryInFirebase = this.getStoreById(localStoreToDelete.$key);
+    storeEntryInFirebase.remove();
+  }
+
 }
